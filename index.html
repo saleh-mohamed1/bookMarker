@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/bookmarkimg.png">
+    <title>Book Marker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="py-5" >
+    <section class="container d-flex justify-content-center align-items-center mb-5">
+            <h1 class="text-center">
+                Book Markers
+            </h1>
+            
+    </section>
+    <section class="bookMark container text-center py-5 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+        <h2>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites 
+            <i class="fa-solid fa-bookmark "></i>
+        </h2>
+        <div class="w-100 d-flex justify-content-center flex-column text-start">
+            <label for="inputName">
+                <i class="fa-solid fa-book-bookmark pe-2 py-2"></i>
+                bookMark Name
+            </label>
+            <input  class="form-control " id="inputName" oninput="validationName()"  placeholder="bookMark Name" type="text">
+            <p id="massegeName" class="text-danger text-center d-none ">
+                insert yourName At least 4 letters to 14 letters and dont pur special character like these  "@,#,$,%,&,*"
+            </p>
+        </div>
+        <div class="w-100 d-flex justify-content-center flex-column text-start">
+            <label for="inputSite">
+                <i  class="fa-solid fa-link pe-2"></i>
+                Site URL
+            </label>
+            <input class="form-control " id="inputSite" oninput="validationURL()" placeholder="Website URL" type="email">
+            <p id="massegeURL" class="text-danger text-center d-none">
+                insert yourURL like that "https://www.google.com"
+            </p>
+        </div>
+        <button id="upDateDone" class="d-none" onclick="upDadteNameAndSite()">done your update</button>
+        <button id="SubmitSiteName" onclick="addNameAndSite()" class=" btn-control px-5 py-2 ">Submit</button>
+        <button  id="updateSite" onclick="upDadteNameAndSite()" class=" btn-control px-5 py-2 bg-black d-none ">up Date</button>
+    </section>
+    <section  class="container text-center tableDesign pt-5">
+        <input id="searchInput" oninput="sarchInput()" class="form-control my-3" placeholder="search By Name...." type="text">
+
+        <table  class="table">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Updade</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="addTable">
+                
+        </table>
+
+    </section>
+</header>
+
+
+<section id="designError" class=" w-100 m-auto d-none ">
+    <div class="design-error rounded-3">
+        <i onclick="actionErorr()" class="fa-solid fa-xmark design-icon"></i>
+        <img width="100%" src="images/33-heemhamoo.jpg" alt="">
+    </div>
+</section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+
+
+body{
+    font-family: 'PT Sans Caption', sans-serif;}
+::selection{
+    background-color: #fec260;
+    color: #352e28;
+}
+header{
+    background-color:#f7ecde;
+    width: 100%;
+    min-height: 100vh;
+    
+}
+h1{
+    position: relative;
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    isolation: isolate;
+}
+h1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 25%;
+    bottom: 5px;
+    background-color: #fec260;
+    transition: height 0.5s ease-in-out;
+    box-shadow:  5px 5px 5px #352e28;
+
+    z-index: -1;
+}
+h1:hover:before{
+    height: 50%;
+}
+.bookMark{
+    border-top: dotted 2px  black;
+}
+.bookMark h2{
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-control{
+    background-color: #d1512d;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    transition: .3s ;
+}
+.btn-control:hover{
+    background-color: #d46647;
+
+}
+.tableDesign{
+    border-top: dotted 2px  black;
+
+}
+.bg-Visit{
+    background-color: #9eb23b;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    transition: .3s ;
+}
+.btn-Visit:hover{
+    background-color: #8a9e23;
+}
+.bg-Delete{
+    background-color: #d1512d;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    transition: .3s ;
+}
+
+.btn-Delete:hover{
+    background-color: #d46647;
+
+}
+/*  */
+.design-error{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 30%;
+    height: 25%;
+    margin: auto;
+    background-color: black  ;
+}
+.design-icon{
+    position: absolute;
+    color: white;
+    top: -60px;
+    cursor: pointer;
+    font-size: 36px;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: red;
+}
